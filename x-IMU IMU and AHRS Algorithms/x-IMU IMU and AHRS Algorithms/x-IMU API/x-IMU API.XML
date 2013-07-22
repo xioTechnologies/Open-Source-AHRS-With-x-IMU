@@ -1,0 +1,2145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>x-IMU API</name>
+    </assembly>
+    <members>
+        <member name="T:x_IMU_API.RawADXL345busData">
+            <summary>
+            Raw ADXL345 bus data class.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.xIMUdata">
+            <summary>
+            x-IMU data class. Base class cannot be instantiated.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawADXL345busData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawADXL345busData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawADXL345busData.#ctor(System.Int16[],System.Int16[],System.Int16[],System.Int16[])">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawADXL345busData"/> class.
+            </summary>
+            <param name="ADXL345_A">
+            Raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="ADXL345_B">
+            Raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="ADXL345_C">
+            Raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="ADXL345_D">
+            Raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RawADXL345busData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.RawADXL345busData.ADXL345_A">
+            <summary>
+            Gets or sets raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawADXL345busData.ADXL345_B">
+            <summary>
+            Gets or sets raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawADXL345busData.ADXL345_C">
+            <summary>
+            Gets or sets raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawADXL345busData.ADXL345_D">
+            <summary>
+            Gets or sets raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CalBatteryAndThermometerData">
+            <summary>
+            Calibrated battery voltage thermometer data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalBatteryAndThermometerData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalBatteryAndThermometerData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalBatteryAndThermometerData.#ctor(System.Single,System.Single)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalBatteryAndThermometerData"/> class.
+            </summary>
+            <param name="batteryVoltage">
+            Calibrated battery voltage data in volts.
+            </param>
+            <param name="thermometer">
+            Calibrated thermometer data degrees Celsius.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CalBatteryAndThermometerData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.CalBatteryAndThermometerData.BatteryVoltage">
+            <summary>
+            Gets or sets the calibrated battery voltage data in volts.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalBatteryAndThermometerData.Thermometer">
+            <summary>
+            Gets or sets the calibrated thermometer data degrees Celsius.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.AsyncReadCompletedEventArgs">
+            <summary>
+            Asynchronous read completed event arguments class.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:x_IMU_API.AsyncReadCompletedEventArgs.#ctor(x_IMU_API.PacketCount,System.Exception,System.Boolean)" -->
+        <member name="P:x_IMU_API.AsyncReadCompletedEventArgs.PacketCounter">
+            <summary>
+            Gets <see cref="T:x_IMU_API.PacketCount"/> data of read.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.AsyncReadCompletedEventArgs.Error">
+            <summary>
+            Gets error <see cref="T:System.Exception"/> if occurred.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.AsyncReadCompletedEventArgs.Cancelled">
+            <summary>
+            Gets a value indicating whether the asynchronous scan was cancelled.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.RawBatteryAndThermometerData">
+            <summary>
+            Raw battery voltage thermometer data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawBatteryAndThermometerData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawBatteryAndThermometerData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawBatteryAndThermometerData.#ctor(System.Int16,System.Int16)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawBatteryAndThermometerData"/> class.
+            </summary>
+            <param name="batteryVoltage">
+            Raw battery voltage ADC data in LSBs.
+            </param>
+            <param name="thermometer">
+            Raw Thermometer ADC data in LSBs.
+            </param>        
+        </member>
+        <member name="M:x_IMU_API.RawBatteryAndThermometerData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.RawBatteryAndThermometerData.BatteryVoltage">
+            <summary>
+            Gets or sets the raw battery voltage ADC data in LSBs.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawBatteryAndThermometerData.Thermometer">
+            <summary>
+            Gets or sets the raw Thermometer ADC data in LSBs.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.PortScanner">
+            <summary>
+            Port scanner class.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.PortScanner.backgroundWorker">
+            <summary>
+            Private BackgroundWorker to run process in new thread.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.PortScanner.receivedDeviceID">
+            <summary>
+            Private received device ID.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.PortScanner"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.PortScanner"/> class.
+            </summary>
+            <param name="firstResultOnly">
+            Value that controls whether the scan will end on finding the first x-IMU.
+            </param>
+            <param name="dontGiveUp">
+            Value that controls whether the scan will continue indefinitely until at least one x-IMU has been found.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.Scan">
+            <summary>
+            Scans ports for x-IMUs.
+            </summary>
+            <returns>
+            Array of <see cref="T:x_IMU_API.PortAssignment"/> found during the scan.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.RunAsynsScan">
+            <summary>
+            Runs asynchronous scans ports for x-IMUs. Progress and results provided in OnAsyncScanProgressChanged and OnAsyncScanCompleted events.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.CancelAnsycScan">
+            <summary>
+            Requests cancelation of pending background port scan process.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.backgroundWorker_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            BackgroundWorker DoWork event to run DoScan as new process.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.DoScan(System.Boolean)">
+            <summary>
+            Scans ports for x-IMUs.
+            </summary>
+            <param name="isAsync">
+            Enables OnAsyncScanProgressChanged event for use when called within background worker.
+            </param>
+            <returns>
+            Array of <see cref="T:x_IMU_API.PortAssignment"/> found during the scan.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.PortScanner.xIMUserialobj_RegisterDataReceived(System.Object,x_IMU_API.RegisterData)">
+            <summary>
+            Register data received event to read x-IMU device ID.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PortScanner.FirstResultOnly">
+            <summary>
+            Gets or sets a value that controls whether the scan will end on finding the first x-IMU.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PortScanner.DontGiveUp">
+            <summary>
+            Gets or sets a value that controls whether the scan will continue indefinitely until at least one x-IMU has been found.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PortScanner.CancellationPending">
+            <summary>
+            Gets a value indicating whether the application has requested cancelation of asynchronous port scan process.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PortScanner.IsBusy">
+            <summary>
+            Gets a value indicating whether the <see cref="T:x_IMU_API.PortScanner"/> is running an asynchronous scan.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CalADXL345busData">
+            <summary>
+            Calibrated ADXL345 bus data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalADXL345busData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalADXL345busData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalADXL345busData.#ctor(System.Single[],System.Single[],System.Single[],System.Single[])">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalADXL345busData"/> class.
+            </summary>
+            <param name="ADXL345_A">
+            Calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="ADXL345_B">
+            Calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="ADXL345_C">
+            Calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="ADXL345_D">
+            Calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CalADXL345busData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.CalADXL345busData.ADXL345_A">
+            <summary>
+            Gets or sets calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalADXL345busData.ADXL345_B">
+            <summary>
+            Gets or sets calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalADXL345busData.ADXL345_C">
+            <summary>
+            Gets or sets calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalADXL345busData.ADXL345_D">
+            <summary>
+            Gets or sets calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.DateTimeData">
+            <summary>
+            Date/Time data class.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.DateTimeData.year">
+            <summary>
+            Private year value.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.DateTimeData.month">
+            <summary>
+            Private month value.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.DateTimeData.day">
+            <summary>
+            Private day value.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.DateTimeData.hours">
+            <summary>
+            Private hours value.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.DateTimeData.minutes">
+            <summary>
+            Private minutes value.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.DateTimeData.seconds">
+            <summary>
+            Private seconds value.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.DateTimeData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.DateTimeData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.DateTimeData.#ctor(System.DateTime)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.DateTimeData"/> class.
+            </summary>
+            <param name="dateTime">
+            <see cref="T:System.DateTime"/> object.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DateTimeData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.DateTimeData"/> class.
+            </summary>
+            <param name="year">
+            Year. Value must be from 2000 2099.
+            </param>
+            <param name="month">
+            Month. Value must be from 1 to 12.
+            </param>
+            <param name="day">
+            Date. Value must be from 1 to 31.
+            </param>
+            <param name="hours">
+            Hours. Value must be from 0 to 23.
+            </param>
+            <param name="minutes">
+            Minutes. Value must be from 0 to 59.
+            </param>
+            <param name="seconds">
+            Seconds. Value must be from 0 to 59.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DateTimeData.ConvertToDateTime">
+            <summary>
+            Converts values to <see cref="T:System.DateTime"/> object.
+            </summary>
+            <returns>
+            <see cref="T:System.DateTime"/>  object.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.DateTimeData.SetFromDateTime(System.DateTime)">
+            <summary>
+            Set values from DateTime object.
+            </summary>
+            <param name="dateTime">
+            <see cref="T:System.DateTime"/> object.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DateTimeData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.DateTimeData.Year">
+            <summary>
+            Gets or sets the year. Value must be from 2000 2099.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DateTimeData.Month">
+            <summary>
+            Gets or sets the month. Value must be from 1 to 12.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DateTimeData.Day">
+            <summary>
+            Gets or sets the day. Value must be from 1 to 31.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DateTimeData.Hours">
+            <summary>
+            Gets or sets the hours. Value must be from 0 to 23.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DateTimeData.Minutes">
+            <summary>
+            Gets or sets the minutes. Value must be from 0 to 59.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DateTimeData.Seconds">
+            <summary>
+            Gets or sets the seconds. Value must be from 0 to 59.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CommandData">
+            <summary>
+            Command data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CommandData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CommandData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CommandData.#ctor(x_IMU_API.CommandCodes)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CommandData"/> class.
+            </summary>
+            <param name="commandCode">
+            Command code. See <see cref="T:x_IMU_API.CommandCodes"/>.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CommandData.#ctor(System.UInt16)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CommandData"/> class.
+            </summary>
+            <param name="commandCode">
+            16-bit command code. Must be defined in <see cref="T:x_IMU_API.CommandCodes"/>.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CommandData.GetMessage">
+            <summary>
+            Gets message associated with command code.
+            </summary>
+            <returns>
+            Message.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.CommandData.CommandCode">
+            <summary>
+            Gets or sets the command code. See <see cref="T:x_IMU_API.CommandCodes"/>.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.xIMUserial">
+            <summary>
+            x-IMU serial class.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.xIMUserial.serialPort">
+            <summary>
+            Private SerialPort object.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.xIMUserial.receiveBuffer">
+            <summary>
+            Private receive buffer.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.xIMUserial.receiveBufferIndex">
+            <summary>
+            Private receive buffer index.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.xIMUserial"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.xIMUserial"/> class.
+            </summary>
+            <param name="portName">
+            Name of the port the x-IMU appears as (for example, COM1).
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.Open">
+            <summary>
+            Opens a new serial port communication and resets packet counters.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.Close">
+            <summary>
+            Closes the port connection.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.GetPortNames">
+            <summary>
+            Gets an array of serial port names for the current computer. Invalid characters are removed.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendCommandPacket(x_IMU_API.CommandCodes)">
+            <summary>
+            Sends command packet.
+            </summary>
+            <param name="commandCode">
+            Command data to be sent.
+            </param> 
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendReadRegisterPacket(x_IMU_API.RegisterData)">
+            <summary>
+            Sends read register packet.
+            </summary>
+            <param name="registerData">
+            Register data containing register address.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendWriteRegisterPacket(x_IMU_API.RegisterData)">
+            <summary>
+            Sends write register packet.
+            </summary>
+            <param name="registerData">
+            Register data containing register address and value.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendReadDateTimePacket">
+            <summary>
+            Sends read date/time packet.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendWriteDateTimePacket(x_IMU_API.DateTimeData)">
+            <summary>
+            Sends write date/time packet.
+            </summary>
+            <param name="dateTimeData">
+            Date/time data to be written.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendDigitalIOpacket(x_IMU_API.DigitalIOdata)">
+            <summary>
+            Sends digital IO packet to set digital output states.
+            </summary>
+            <param name="digitalIOdata">
+            Digital IO data representing digital output states to be set.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendPWMoutputPacket(x_IMU_API.PWMoutputData)">
+            <summary>
+            Sends PWM output packet to set PWM duty cycles.
+            </summary>
+            <param name="_PWMoutputData">
+            PWM output data representing PWM duty cycles to be set.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.SendByteArray(System.Byte[])">
+            <summary>
+            Sends byte array to serial port and increments the sent packets counter.
+            </summary>
+            <param name="byteArray">
+            Byte array to be sent to serial port.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUserial.serialPort_DataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            Data received event to decode packet and call associated data object received event. Decoding exceptions handled and ignored.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUserial.ReceptionErrors">
+            <summary>
+            Gets the number of reception errors.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUserial.PacketsReadCounter">
+            <summary>
+            Gets the number of packets read.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUserial.PacketsWrittenCounter">
+            <summary>
+            Gets the number of packets written.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUserial.PortName">
+            <summary>
+            Gets or sets the name of the serial port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUserial.IsOpen">
+            <summary>
+            Gets a value indicating the open or closed status of the serial port.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.RawInertialAndMagneticData">
+            <summary>
+            Raw gyroscope, accelerometer and magnetometer data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawInertialAndMagneticData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawInertialAndMagneticData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawInertialAndMagneticData.#ctor(System.Int16[],System.Int16[],System.Int16[])">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawInertialAndMagneticData"/> class.
+            </summary>
+            <param name="gyroscope">
+            Raw gyroscope ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="accelerometer">
+            Raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>  
+            <param name="magnetometer">
+            Raw magnetometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>  
+        </member>
+        <member name="M:x_IMU_API.RawInertialAndMagneticData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.RawInertialAndMagneticData.Gyroscope">
+            <summary>
+            Gets or sets the raw gyroscope ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawInertialAndMagneticData.Accelerometer">
+            <summary>
+            Gets or sets the raw accelerometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawInertialAndMagneticData.Magnetometer">
+            <summary>
+            Gets or sets the raw magnetometer ADC data in LSBs. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.PacketCount">
+            <summary>
+            Packet count class to count number of packets read/written.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.PacketCount.packetCounts">
+            <summary>
+            Private array of packet counts.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PacketCount.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.PacketCount"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PacketCount.Reset">
+            <summary>
+            Resets all packet counts to zero.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.TotalPackets">
+            <summary>
+            Gets or sets the total number of packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.ErrorPackets">
+            <summary>
+            Gets or sets the error Error packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.CommandPackets">
+            <summary>
+            Gets or sets the Command packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.ReadRegisterPackets">
+            <summary>
+            Gets or sets the ReadRegister packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.WriteRegisterPackets">
+            <summary>
+            Gets or sets the WriteRegister packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.ReadDateTimePackets">
+            <summary>
+            Gets or sets the ReadDateTime packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.WriteDateTimePackets">
+            <summary>
+            Gets or sets the WriteDateTime packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.RawBatteryAndThermometerDataPackets">
+            <summary>
+            Gets or sets the RawBatteryAndThermometerData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.CalBatteryAndThermometerDataPackets">
+            <summary>
+            Gets or sets the CalBatteryAndThermometerData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.RawInertialAndMagneticDataPackets">
+            <summary>
+            Gets or sets the RawInertialAndMagneticData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.CalInertialAndMagneticDataPackets">
+            <summary>
+            Gets or sets the CalInertialAndMagneticData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.QuaternionDataPackets">
+            <summary>
+            Gets or sets the QuaternionData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.DigitalIOdataPackets">
+            <summary>
+            Gets or sets the DigitalIOdata packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.RawAnalogueInputDataPackets">
+            <summary>
+            Gets or sets the RawAnalogueInputData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.CalAnalogueInputDataPackets">
+            <summary>
+            Gets or sets the CalAnalogueInputData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.PWMoutputDataPackets">
+            <summary>
+            Gets or sets the PWMoutputData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.RawADXL345busDataPackets">
+            <summary>
+            Gets or sets the RawADXL345busData packet count.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PacketCount.CalADXL345busDataPackets">
+            <summary>
+            Gets or sets the CalADXL345busData packet count.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.FixedFloat">
+            <summary>
+            16-bit fixed-point / floating-point conversion class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.FixedFloat.FixedToFloat(System.Int16,x_IMU_API.Qvals)">
+            <summary>
+            Returns floating-point value from specified 16-bit fixed-point.
+            </summary>
+            <param name="fixedValue">
+            16-bit fixed-point value.
+            </param>
+            <param name="q">
+            Number of fraction bits. See <see cref="T:x_IMU_API.Qvals"/>.
+            </param>
+            <returns>
+            Floating-point number.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.FixedFloat.FloatToFixed(System.Single,x_IMU_API.Qvals)">
+            <summary>
+            Returns 16-bit fixed-point value from specified floating-point value with saturation.
+            </summary>
+            <param name="floatValue">
+            Floating-point representation of 16-bit fixed-point value.
+            </param>
+            <param name="q">
+            Number of fraction bits. See <see cref="T:x_IMU_API.Qvals"/>.
+            </param>
+            <returns>
+            16-bit fixed-point value.
+            </returns>
+        </member>
+        <member name="T:x_IMU_API.ErrorData">
+            <summary>
+            Error data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.ErrorData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.ErrorData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.ErrorData.#ctor(x_IMU_API.ErrorCodes)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.ErrorData"/> class.
+            </summary>
+            <param name="errorCode">
+            Error code. See <see cref="T:x_IMU_API.ErrorCodes"/>.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.ErrorData.#ctor(System.UInt16)">
+            <summary>
+            Initialises a new instance of the ErrorData class.
+            </summary>
+            <param name="errorCode">
+            Error code. Must be defined in <see cref="T:x_IMU_API.ErrorCodes"/>.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.ErrorData.GetMessage">
+            <summary>
+            Message associated with error code.
+            </summary>
+            <returns>
+            Message.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.ErrorData.ErrorCode">
+            <summary>
+            Gets or sets the error code. Must be defined in <see cref="T:x_IMU_API.ErrorCodes"/>.
+            </summary>
+            <exception cref="T:System.Exception">
+            Thrown if invalid error code specifed.
+            </exception>
+        </member>
+        <member name="T:x_IMU_API.xIMUfile">
+            <summary>
+            x-IMU file class.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.xIMUfile.fileStream">
+            <summary>
+            Private FileStream handles file read/writes.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.xIMUfile.backgroundWorker">
+            <summary>
+            Private BackgroundWorker to run process in new thread.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.xIMUfile"/> class. Opens or creates file.
+            </summary>
+            <param name="filePath">
+            Path of file.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.xIMUfile"/> class.
+            </summary>
+            <param name="filePath">
+            Path of file.
+            </param>
+            <param name="overwrite">
+            Enable overwrite. true = create or overwrite file, false = create or open file.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.Close">
+            <summary>
+            Closes the file.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.WriteWriteRegisterPacket(x_IMU_API.RegisterData)">
+            <summary>
+            Writes write register packet.
+            </summary>
+            <param name="registerData">
+            Register data containing register address and value.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.WriteByteArray(System.Byte[])">
+            <summary>
+            Writes byte array to serial port and increments the sent packets counter.
+            </summary>
+            <param name="byteArray">
+            Byte array to be sent to serial port.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.Read">
+            <summary>
+            Reads file. Interpreted packets are provided in individual events.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.RunAnsycRead">
+            <summary>
+            Run asynchronous read. Interpreted packets are provided in individual events.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.CancelAnsycRead">
+            <summary>
+            Requests cancelation of pending read process.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.backgroundWorker_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            BackgroundWorker DoWork event to run DoRead as new process.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.xIMUfile.DoRead(System.Boolean)">
+            <summary>
+            Reads file. Interpreted packets are provided in individual events.
+            </summary>
+            <param name="isAsync">
+            Enables OnAsyncReadProgressChanged event for use when called within background worker.
+            </param>
+        </member>
+        <member name="P:x_IMU_API.xIMUfile.FilePath">
+            <summary>
+            Gets the file path.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUfile.ReadErrors">
+            <summary>
+            Gets the number of read errors.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUfile.PacketsReadCounter">
+            <summary>
+            Gets the number of packets read.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.xIMUfile.PacketsWrittenCounter">
+            <summary>
+            Gets the number of packets written.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.PWMoutputData">
+            <summary>
+            PWM output data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PWMoutputData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.PWMoutputData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PWMoutputData.#ctor(System.UInt16,System.UInt16,System.UInt16,System.UInt16)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.PWMoutputData"/> class.
+            </summary>
+            <param name="AX0">
+            Gets or sets PWM channel AX0 duty cycle. 0 to 65535 = 0% to 100%.
+            </param>
+            <param name="AX2">
+            Gets or sets PWM channel AX2 duty cycle. 0 to 65535 = 0% to 100%.
+            </param>
+            <param name="AX4">
+            Gets or sets PWM channel AX4 duty cycle. 0 to 65535 = 0% to 100%.
+            </param>
+            <param name="AX6">
+            Gets or sets PWM channel AX6 duty cycle. 0 to 65535 = 0% to 100%.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.PWMoutputData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.PWMoutputData.AX0">
+            <summary>
+            Gets or sets PWM channel AX0 duty cycle. 0 to 65535 = 0% to 100%.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PWMoutputData.AX2">
+            <summary>
+            Gets or sets PWM channel AX2 duty cycle. 0 to 65535 = 0% to 100%.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PWMoutputData.AX4">
+            <summary>
+            Gets or sets PWM channel AX4 duty cycle. 0 to 65535 = 0% to 100%.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PWMoutputData.AX6">
+            <summary>
+            Gets or sets PWM channel AX6 duty cycle. 0 to 65535 = 0% to 100%.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CompatibleFirmwareVersions">
+            <summary>
+            Compatible firmware versions. Only major number required.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.PacketHeaders">
+            <summary>
+            Packet headers.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks>
+        </member>
+        <member name="T:x_IMU_API.ErrorCodes">
+            <summary>
+            Error codes.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.CommandCodes">
+            <summary>
+            Command codes.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.Qvals">
+            <summary>
+            Number of fractional bits used by fixed-point representations.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.RegisterAddresses">
+            <summary>
+            Register addresses.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.ButtonModes">
+            <summary>
+            Button mode register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.GyroscopeFullScales">
+            <summary>
+            Accelerometer full-scale register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.AccelerometerFullScales">
+            <summary>
+            Accelerometer full-scale register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.MagnetometerFullScales">
+            <summary>
+            Magnetometer full-scale register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.AlgorithmModes">
+            <summary>
+            Algorithm mode register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.SensorDataModes">
+            <summary>
+            Data mode register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.DataOutputRates">
+            <summary>
+            Data output rate register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.MotionTrigWakeUpModes">
+            <summary>
+            Motion triggered wake up mode register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.BluetoothPowerModes">
+            <summary>
+            Bluetooth power mode register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.auxiliaryPortModes">
+            <summary>
+            Auxiliary Port mode register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.DigitalIOdirections">
+            <summary>
+            Digital I/O direction register values.
+            </summary>
+            <remarks>
+            A matching enumeration exists in firmware source.
+            </remarks> 
+        </member>
+        <member name="T:x_IMU_API.PacketConstruction">
+            <summary>
+            Packet construction class. Contains static methods for packet construction and deconstruction.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructCommandPacket(x_IMU_API.CommandCodes)">
+            <summary>
+            Constructs an encoded command packet.
+            </summary>
+            <param name="commandCode">
+            Command code. See <see cref="T:x_IMU_API.CommandCodes"/>.
+            </param> 
+            <returns>
+            Constructed and encoded command packet.
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructReadRegisterPacket(x_IMU_API.RegisterData)">
+            <summary>
+            Constructs a read register packet.
+            </summary>
+            <param name="registerData">
+            <see cref="T:x_IMU_API.RegisterData"/> instance containing register address to be read.
+            </param>
+            <returns>
+            Constructed and encoded read register packet
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructWriteRegisterPacket(x_IMU_API.RegisterData)">
+            <summary>
+            Constructs a write register packet.
+            </summary>
+            <param name="registerData">
+            <see cref="T:x_IMU_API.RegisterData"/> instance containing register address and value to be written.
+            </param>
+            <returns>
+            Constructed and encoded write register packet
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructReadDateTimePacket">
+            <summary>
+            Constructs a read date/time packet.
+            </summary>
+            <returns>
+            Constructed and encoded read date/time packet
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructWriteDateTimePacket(x_IMU_API.DateTimeData)">
+            <summary>
+            Constructs a write date/time packet.
+            </summary>
+            <param name="dateTimeData">
+            <see cref="T:x_IMU_API.DateTimeData"/> instance containing data to be written.
+            </param>
+            <returns>
+            Constructed and encoded write date/time packet
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructDigitalIOpacket(x_IMU_API.DigitalIOdata)">
+            <summary>
+            Constructs an encoded digital I/O packet.
+            </summary>
+            <param name="digitalIOdata">
+            DigitalIOdata object containing output states to be set.
+            </param> 
+            <returns>
+            Constructed and encoded digital I/O packet.
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.ConstructPWMoutputPacket(x_IMU_API.PWMoutputData)">
+            <summary>
+            Constructs an encoded PWM output data packet.
+            </summary>
+            <param name="PWMoutputData">
+            PWM output data.
+            </param>
+            <returns>
+            Constructed and encoded PWM output data packet.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.InsertChecksum(System.Byte[])">
+            <summary>
+            Inserts check sum at last position in array equal to the sum all of bytes preceding it.
+            </summary>
+            <param name="decodedPacket">
+            Decoded packet byte array.
+            </param>
+            <returns>
+            Decoded packet with checksum inserted at last position in array.
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.DeconstructPacket(System.Byte[])">
+            <summary>
+            Deconstructs packet from and encoded byte array and return data object.
+            </summary>
+            <param name="encodedPacket">
+            Byte array containing the encoded packet.
+            </param>
+            <returns>
+            <see cref="T:x_IMU_API.xIMUdata"/> object deconstructed from packet.
+            </returns>  
+            <exception cref="T:System.Exception">
+            Thrown when deconstruction of an invalid packet is attempted.
+            </exception>
+        </member>
+        <member name="M:x_IMU_API.PacketConstruction.Concat(System.Byte,System.Byte)">
+            <summary>
+            Concatenates 2 bytes to return a short.
+            </summary>
+            <param name="MSB">
+            Most Significant Byte.
+            </param>
+            <param name="LSB">
+            Least Significant Byte.
+            </param> 
+            <returns>
+            MSB and LSB concatenated to create a short.
+            </returns>
+        </member>
+        <member name="T:x_IMU_API.DigitalPortBits">
+            <summary>
+            Port data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.DigitalPortBits.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.DigitalPortBits"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.DigitalPortBits.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.DigitalPortBits"/> class.
+            </summary>
+            <param name="_AX0">
+            Channel AX0. lsb of 8-bit port.
+            </param>
+            <param name="AX1">
+            Channel AX1. 2nd lsb of 8-bit port.
+            </param>
+            <param name="AX2">
+            Channel AX2. 3rd lsb of 8-bit port.
+            </param>
+            <param name="AX3">
+            Channel AX3. 4th lsb of 8-bit port.
+            </param>
+            <param name="AX4">
+            Channel AX4. 5th lsb of 8-bit port.
+            </param>
+            <param name="AX5">
+            Channel AX5. 6th lsb of 8-bit port.
+            </param>
+            <param name="AX6">
+            Channel AX6. 7th lsb of 8-bit port.
+            </param>
+            <param name="AX7">
+            Channel AX7. msb of 8-bit port.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DigitalPortBits.ConvertToByte">
+            <summary>
+            Convert 8 port bits to byte.
+            </summary>
+            <returns>
+            Byte made up of 8 port bits.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.DigitalPortBits.SetBitsFromByte(System.Byte)">
+            <summary>
+            Sets 8 port bits from byte.
+            </summary>
+            <param name="byteValue">
+            Byte value.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DigitalPortBits.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX0">
+            <summary>
+            Gets or sets channel AX0. lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX1">
+            <summary>
+            Gets or sets channel AX1. 2nd lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX2">
+            <summary>
+            Gets or sets channel AX2. 3rd lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX3">
+            <summary>
+            Gets or sets channel AX3. 4th lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX4">
+            <summary>
+            Gets or sets channel AX4. 5th lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX5">
+            <summary>
+            Gets or sets channel AX5. 6th lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX6">
+            <summary>
+            Gets or sets channel AX6. 7th lsb of 8-bit port.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalPortBits.AX7">
+            <summary>
+            Gets or sets channel AX7. msb of 8-bit port.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CalAnalogueInputData">
+            <summary>
+            Calibrated analogue input data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalAnalogueInputData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalAnalogueInputData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalAnalogueInputData.#ctor(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalAnalogueInputData"/> class.
+            </summary>
+            <param name="AX0">
+            Calibrated channel AX0 voltage ADC data in V.
+            </param>
+            <param name="AX1">
+            Calibrated channel AX1 voltage ADC data in V.
+            </param>
+            <param name="AX2">
+            Calibrated channel AX2 voltage ADC data in V.
+            </param>
+            <param name="AX3">
+            Calibrated channel AX3 voltage ADC data in V.
+            </param>
+            <param name="AX4">
+            Calibrated channel AX4 voltage ADC data in V.
+            </param>
+            <param name="AX5">
+            Calibrated channel AX5 voltage ADC data in V.
+            </param>
+            <param name="AX6">
+            Calibrated channel AX6 voltage ADC data in V.
+            </param>
+            <param name="AX7">
+            Calibrated channel AX7 voltage ADC data in V.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CalAnalogueInputData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX0">
+            <summary>
+            Gets or sets calibrated channel AX0 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX1">
+            <summary>
+            Gets or sets calibrated channel AX1 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX2">
+            <summary>
+            Gets or sets calibrated channel AX2 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX3">
+            <summary>
+            Gets or sets calibrated channel AX3 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX4">
+            <summary>
+            Gets or sets calibrated channel AX4 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX5">
+            <summary>
+            Gets or sets calibrated channel AX5 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX6">
+            <summary>
+            Gets or sets calibrated channel AX6 voltage data in V.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalAnalogueInputData.AX7">
+            <summary>
+            Gets or sets calibrated channel AX7 voltage data in V.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.PacketEncoding">
+            <summary>
+            Packet encoding class. Contains static methods for packet encoding and decoding.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PacketEncoding.EncodePacket(System.Byte[])">
+            <summary>
+            Encodes packet with consecutive right shifts so that the msb of each encoded byte is clear. The msb of the final byte is set to indicate the end of the packet.
+            </summary>
+            <param name="decodedPacket">
+            The decoded packet contents to be encoded.
+            </param>
+            <returns>
+            The encoded packet.
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketEncoding.RightShiftByteArray(System.Byte[])">
+            <summary>
+            Right shifts a byte array by 1 bit. The lsb of byte x becomes the msb of byte x+1.
+            </summary>
+            <param name="byteArray">
+            The byte array to be right shifted.
+            </param>
+            <returns>
+            The right shifted byte array.
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketEncoding.DecodePacket(System.Byte[])">
+            <summary>
+            Decodes a packet with consecutive left shifts so that the msb of each encoded byte is removed.
+            </summary>
+            <param name="encodedPacket">
+            The endcoded packet to be decoded.
+            </param>
+            <returns>
+            The decoded packet.
+            </returns> 
+        </member>
+        <member name="M:x_IMU_API.PacketEncoding.LeftShiftByteArray(System.Byte[])">
+            <summary>
+            Left shifts a byte array by 1 bit. The msb of byte x becomes the lsb of byte x-1.
+            </summary>
+            <param name="byteArray">
+            The byte array to be left shifted.
+            </param>
+            <returns>
+            The left shifted byte array.
+            </returns> 
+        </member>
+        <member name="T:x_IMU_API.PortAssignment">
+            <summary>
+            Port asignment class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.PortAssignment.#ctor(System.String,System.String)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.PortAssignment"/> class.
+            </summary>
+            <param name="portName">
+            Port name assigned the x-IMU.
+            </param>
+            <param name="deviceID">
+            Device ID of x-IMU.
+            </param>
+        </member>
+        <member name="P:x_IMU_API.PortAssignment.PortName">
+            <summary>
+            Gets the port name assigned the x-IMU.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.PortAssignment.DeviceID">
+            <summary>
+            Gets the device ID of x-IMU.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CalInertialAndMagneticData">
+            <summary>
+            Calibrated gyroscope, accelerometer and magnetometer data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalInertialAndMagneticData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalInertialAndMagneticData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CalInertialAndMagneticData.#ctor(System.Single[],System.Single[],System.Single[])">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.CalInertialAndMagneticData"/> class.
+            </summary>
+            <param name="gyroscope">
+            Calibrated gyroscope data in degrees per second. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>
+            <param name="accelerometer">
+            Calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>  
+            <param name="magnetometer">
+            Calibrated magnetometer data in Gauss. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </param>  
+        </member>
+        <member name="M:x_IMU_API.CalInertialAndMagneticData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.CalInertialAndMagneticData.Gyroscope">
+            <summary>
+            Gets or sets the calibrated gyroscope data in degrees per second. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalInertialAndMagneticData.Accelerometer">
+            <summary>
+            Gets or sets the calibrated accelerometer data in 'g'. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CalInertialAndMagneticData.Magnetometer">
+            <summary>
+            Gets or sets the calibrated magnetometer data in Gauss. Elements 0, 1 and 2 represent the sensor x, y and z axes respectively.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.AsyncScanProgressChangedEventArgs">
+            <summary>
+            Scan process changed event arguments class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.AsyncScanProgressChangedEventArgs.#ctor(System.Int32,System.String)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.AsyncScanProgressChangedEventArgs"/> class.
+            </summary>
+            <param name="progressPercentage">
+            Progress percentage.
+            </param>
+            <param name="progressMessage">
+            Progress message.
+            </param>
+        </member>
+        <member name="P:x_IMU_API.AsyncScanProgressChangedEventArgs.ProgressPercentage">
+            <summary>
+            Gets the progress percentage.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.AsyncScanProgressChangedEventArgs.ProgressMessage">
+            <summary>
+            Gets the progress message.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.QuaternionData">
+            <summary>
+            Quaternion data class.
+            </summary>
+            <remarks>
+            See http://www.x-io.co.uk/res/doc/quaternions.pdf for more information on quaternions.
+            </remarks>
+        </member>
+        <member name="F:x_IMU_API.QuaternionData.quaternion">
+            <summary>
+            Private quaternion array.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.QuaternionData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.#ctor(System.Single[])">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.QuaternionData"/> class.
+            </summary>
+            <param name="quaternion">
+            Quaternion. Must of 4 elements. Each element must be of value -1 to +1.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.ConvertToConjugate">
+            <summary>
+            Returns the quaternion conjugate.
+            </summary>
+            <returns>
+            Quaternion conjugate.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.ConvertToRotationMatrix">
+            <summary>
+            Converts data to rotation matrix.
+            </summary>
+            <remarks>
+            Index order is row major. See http://en.wikipedia.org/wiki/Row-major_order
+            </remarks> 
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.ConvertToEulerAngles">
+            <summary>
+            Converts data to ZYX Euler angles (in degrees).
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.Rad2Deg(System.Single)">
+            <summary>
+            Converts from radians to degrees.
+            </summary>
+            <param name="radians">
+            Angular quantity in radians.
+            </param> 
+            <returns>
+            Angular quantity in degrees.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.ConvertToRotationMatrixCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables representaing the elements of a rotation matrix.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+            <remarks>
+            Index order is row major. See http://en.wikipedia.org/wiki/Row-major_order
+            </remarks> 
+        </member>
+        <member name="M:x_IMU_API.QuaternionData.ConvertToEulerAnglesCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables representing the ZYX Euler angles (in degrees).
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.QuaternionData.Quaternion">
+            <summary>
+            Gets or sets the quaternion. Must of 4 elements. Vector will be normalised.
+            </summary>
+            <exception cref="T:System.Exception">
+            Thrown if invalid quaternion specified.
+            </exception>
+        </member>
+        <member name="T:x_IMU_API.DigitalIOdata">
+            <summary>
+            Digital I/O data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.DigitalIOdata.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.DigitalIOdata"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.DigitalIOdata.#ctor(x_IMU_API.DigitalPortBits)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.DigitalIOdata"/> class.
+            </summary>
+            <param name="state">
+            State of the digital I/O port. true (1) = logic high, false (0) = logic low.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DigitalIOdata.#ctor(System.Byte,System.Byte)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.DigitalIOdata"/> class.
+            </summary>     
+            <param name="direction">
+            Direction of the digital I/O port. true (1) = input, false (0) = output.
+            </param>
+            <param name="state">
+            State of the digital I/O port. true (1) = logic high, false (0) = logic low.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.DigitalIOdata.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.DigitalIOdata.Direction">
+            <summary>
+            Gets direction of the digital I/O port. true (1) = input, false (0) = output.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.DigitalIOdata.State">
+            <summary>
+            Gets or sets state of the digital I/O port. true (1) = logic high, false (0) = logic low.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.AsyncScanCompletedEventArgs">
+            <summary>
+            Run scan completed event arguments class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.AsyncScanCompletedEventArgs.#ctor(x_IMU_API.PortAssignment[],System.Boolean)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.AsyncScanCompletedEventArgs"/> class.
+            </summary>
+            <param name="portAssignments">
+            Array of <see cref="!:portAssignments"/> found during the scan.
+            </param>
+            <param name="cancelled">
+            Value indicating whether the asynchronous scan was cancelled.
+            </param>
+        </member>
+        <member name="P:x_IMU_API.AsyncScanCompletedEventArgs.PortAssignments">
+            <summary>
+            Gets an array of <see cref="P:x_IMU_API.AsyncScanCompletedEventArgs.PortAssignments"/> found during the scan.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.AsyncScanCompletedEventArgs.Cancelled">
+            <summary>
+            Gets a value indicating whether the asynchronous scan was cancelled.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.AsyncReadProgressChangedEventArgs">
+            <summary>
+            Asynchronous read process changed event arguments class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.AsyncReadProgressChangedEventArgs.#ctor(System.Int32,System.String)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.AsyncReadProgressChangedEventArgs"/> class.
+            </summary>
+            <param name="progressPercentage">
+            Progress percentage.
+            </param>
+            <param name="progressMessage">
+            Progress message.
+            </param>
+        </member>
+        <member name="P:x_IMU_API.AsyncReadProgressChangedEventArgs.ProgressPercentage">
+            <summary>
+            Gets the progress percentage.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.AsyncReadProgressChangedEventArgs.ProgressMessage">
+            <summary>
+            Gets the progress message.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CSVfileWriter">
+            <summary>
+            CSV file writer class.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.CSVfileWriter.writesEnabled">
+            <summary>
+            Writes enabled flag.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.CSVfileWriter.streamWriters">
+            <summary>
+            Array of StreamWriter.
+            </summary>
+        </member>
+        <member name="F:x_IMU_API.CSVfileWriter.CSVheadings">
+            <summary>
+            CSV column headings for each file type.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:x_IMU_API.CSVfileWriter"/> class.
+            </summary>
+            <param name="fileBasePath">
+            Base path of file. File name automatically extended with appropriate identifier and file extension.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.CloseFiles">
+            <summary>
+            Closes all open CSV files and returns file names of files created.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteData(x_IMU_API.xIMUdata)">
+            <summary>
+            Write <see cref="T:x_IMU_API.xIMUdata"/>  object to appropriate CSV file. Will create new file if required.
+            </summary>
+            <param name="xIMUdataObject">
+            x-IMU data object.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteErrorData(x_IMU_API.ErrorData)">
+            <summary>
+            Write <see cref="T:x_IMU_API.ErrorData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="errorData">
+            x-IMU error data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteCommandData(x_IMU_API.CommandData)">
+            <summary>
+            Write <see cref="T:x_IMU_API.CommandData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="commandData">
+            x-IMU command data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteRegisterData(x_IMU_API.RegisterData)">
+            <summary>
+            Write <see cref="T:x_IMU_API.RegisterData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="registerData">
+            x-IMU register data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteDateTimeData(x_IMU_API.DateTimeData)">
+            <summary>
+            Write <see cref="T:x_IMU_API.DateTimeData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="dateTimeData">
+            x-IMU data/time data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteRawBatteryAndThermometerData(x_IMU_API.RawBatteryAndThermometerData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.RawBatteryAndThermometerData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="rawBatteryAndThermometerData">
+            x-IMU raw battery and thermometer data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteCalBatteryAndThermometerData(x_IMU_API.CalBatteryAndThermometerData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.CalBatteryAndThermometerData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="calBatteryAndThermometerData">
+            x-IMU calibrated battery and thermometer data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteRawInertialAndMagneticData(x_IMU_API.RawInertialAndMagneticData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.RawInertialAndMagneticData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="rawInertialAndMagneticData">
+            x-IMU raw inertial/magnetic data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteCalInertialAndMagneticData(x_IMU_API.CalInertialAndMagneticData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.CalInertialAndMagneticData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="calInertialAndMagneticData">
+            x-IMU calibrated inertial/magnetic data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteQuaternionData(x_IMU_API.QuaternionData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.QuaternionData"/> to quaternion, rotation matrix and Euler angles CSV files. Will create new files if required.
+            </summary>
+            <param name="quaternionData">
+            x-IMU quaternion data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteDigitalIOdata(x_IMU_API.DigitalIOdata)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.DigitalIOdata"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="digitalIOdata">
+            x-IMU digital I/O data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteRawAnalogueInputData(x_IMU_API.RawAnalogueInputData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.RawAnalogueInputData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="rawAnalogueInputData">
+            Raw analogue input data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteCalAnalogueInputData(x_IMU_API.CalAnalogueInputData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.CalAnalogueInputData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="calAnalogueInputData">
+            Calibrated analogue input data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WritePWMoutputData(x_IMU_API.PWMoutputData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.PWMoutputData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="PWMoutputData">
+            Calibrated analogue input data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteRawADXL345busData(x_IMU_API.RawADXL345busData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.RawADXL345busData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="rawADXL345busData">
+            Raw ADXL345 bus data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteCalADXL345busData(x_IMU_API.CalADXL345busData)">
+            <summary>
+            Writes <see cref="T:x_IMU_API.CalADXL345busData"/> to CSV file. Will create new file if required.
+            </summary>
+            <param name="calADXL345busData">
+            Cal ADXL345 bus data.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.CSVfileWriter.WriteCSVlineAtFileIndex(System.String,x_IMU_API.CSVfileWriter.FileIndexes)">
+            <summary>
+            Writes CSV line to file according to specfied fileIndex.
+            </summary>
+            <param name="CSVline">
+            CSV text line. First CSV is packet number.
+            </param>
+            <param name="fileIndex">
+            file index.
+            </param>
+        </member>
+        <member name="P:x_IMU_API.CSVfileWriter.FileBasePath">
+            <summary>
+            Gets the file base path. This name is automatically extended to create the name of each CSV file.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CSVfileWriter.PacketsWrittenCounter">
+            <summary>
+            Gets the number of packets written.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.CSVfileWriter.FilesCreated">
+            <summary>
+            Gets the names of files created.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.CSVfileWriter.FileIndexes">
+            <summary>
+            Index of each file within array. Labels used to create file names.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.RegisterData">
+            <summary>
+            Register data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.#ctor(x_IMU_API.RegisterAddresses)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RegisterData"/> class.
+            </summary>
+            <param name="registerAddress">
+            Register address. See <see cref="T:x_IMU_API.RegisterAddresses"/>.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.#ctor(x_IMU_API.RegisterAddresses,System.Single)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RegisterData"/> class.
+            </summary>
+            <param name="registerAddress">
+            Register address. See <see cref="T:x_IMU_API.RegisterAddresses"/>.
+            </param>
+            <param name="value">
+            Register float value to be interpreted using fixed-point precision defined in <see cref="T:x_IMU_API.Qvals"/>.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.#ctor(x_IMU_API.RegisterAddresses,System.UInt16)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RegisterData"/> class.
+            </summary>
+            <param name="registerAddress">
+            16-bit register address. Must be defined in <see cref="T:x_IMU_API.RegisterAddresses"/>.
+            </param>
+            <param name="value">
+            16-bit register value.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.#ctor(System.UInt16,System.UInt16)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RegisterData"/> class.
+            </summary>
+            <param name="address">
+            16-bit register address. Must be defined in <see cref="T:x_IMU_API.RegisterAddresses"/>.
+            </param>
+            <param name="value">
+            16-bit register value.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.ConvertValueToFloat">
+            <summary>
+            Converts 16-bit register value to float using fixed-point precision defined in <see cref="T:x_IMU_API.Qvals"/>.
+            </summary>
+            <returns>
+            Register value represented as float.
+            </returns>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.SetValueFromFloat(System.Single)">
+            <summary>
+            Sets 16-bit register value from float interpreted using fixed-point precision defined in <see cref="T:x_IMU_API.Qvals"/>.
+            </summary>
+            <param name="floatValue">
+            Register value represented as float.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RegisterData.LookupQval">
+            <summary>
+            Returns <see cref="T:x_IMU_API.Qvals"/> associated with register address.
+            </summary>
+            <returns>
+            <see cref="T:x_IMU_API.Qvals"/> associated with register address.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.RegisterData.Address">
+            <summary>
+            Gets or sets the register address. See <see cref="T:x_IMU_API.RegisterAddresses"/>.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RegisterData.Value">
+            <summary>
+            Gets or sets 16-bit register value.
+            </summary>
+        </member>
+        <member name="T:x_IMU_API.RawAnalogueInputData">
+            <summary>
+            Raw analogue input data class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawAnalogueInputData.#ctor">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawAnalogueInputData"/> class.
+            </summary>
+        </member>
+        <member name="M:x_IMU_API.RawAnalogueInputData.#ctor(System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16,System.Int16)">
+            <summary>
+            Initialises a new instance of the <see cref="T:x_IMU_API.RawAnalogueInputData"/> class.
+            </summary>
+            <param name="AX0">
+            Raw channel AX0 voltage ADC data in lsb.
+            </param>
+            <param name="AX1">
+            Raw channel AX1 voltage ADC data in lsb.
+            </param>
+            <param name="AX2">
+            Raw channel AX2 voltage ADC data in lsb.
+            </param>
+            <param name="AX3">
+            Raw channel AX3 voltage ADC data in lsb.
+            </param>
+            <param name="AX4">
+            Raw channel AX4 voltage ADC data in lsb.
+            </param>
+            <param name="AX5">
+            Raw channel AX5 voltage ADC data in lsb.
+            </param>
+            <param name="AX6">
+            Raw channel AX6 voltage ADC data in lsb.
+            </param>
+            <param name="AX7">
+            Raw channel AX7 voltage ADC data in lsb.
+            </param>
+        </member>
+        <member name="M:x_IMU_API.RawAnalogueInputData.ConvertToCSVstring">
+            <summary>
+            Converts data to string of Comma Separated Variables.
+            </summary>
+            <returns>
+            CSV text line.
+            </returns>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX0">
+            <summary>
+            Gets or sets raw channel AX0 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX1">
+            <summary>
+            Gets or sets raw channel AX1 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX2">
+            <summary>
+            Gets or sets raw channel AX2 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX3">
+            <summary>
+            Gets or sets raw channel AX3 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX4">
+            <summary>
+            Gets or sets raw channel AX4 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX5">
+            <summary>
+            Gets or sets raw channel AX5 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX6">
+            <summary>
+            Gets or sets raw channel AX6 voltage ADC data in lsb.
+            </summary>
+        </member>
+        <member name="P:x_IMU_API.RawAnalogueInputData.AX7">
+            <summary>
+            Gets or sets raw channel AX7 voltage ADC data in lsb.
+            </summary>
+        </member>
+    </members>
+</doc>
